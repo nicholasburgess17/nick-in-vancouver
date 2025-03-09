@@ -1,8 +1,14 @@
 import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import Header from "./components/header/header";
-import Footer from "./components/footer/footer";
-
+import Header from "./header/components/header/header";
+import Footer from "./components/footer";
+import Home from "./pages/Home";
+import Portfolio from "./pages/Portfolio";
+import Store from "./pages/Store";
+import ProductPage from "./pages/ProductPage";
+import Cart from "./pages/Cart";
+import About from "./pages/About";
+import Contact from "./pages/Contact";
 
 const App = () => {
   return (
