@@ -2,13 +2,13 @@ import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Header from "./components/header";
 import Footer from "./components/footer";
-import Home from "./pages/Home";
-import Portfolio from "./pages/Portfolio";
-import Store from "./pages/Store";
-import ProductPage from "./pages/ProductPage";
-import Cart from "./pages/Cart";
-import About from "./pages/About";
-import Contact from "./pages/Contact";
+import Home from "./pages/home";
+import Portfolio from "./pages/portfolio";
+import Store from "./pages/store";
+import ProductPage from "./pages/productPage";
+import Cart from "./pages/cart";
+import About from "./pages/about";
+import Contact from "./pages/contact";
 
 const App = () => {
   return (
