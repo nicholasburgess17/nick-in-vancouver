@@ -1,5 +1,7 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { auth } from "./firebaseConfig";
+import { onAuthStateChanged } from "firebase/auth";
 import Header from "./components/header";
 import Footer from "./components/footer";
 import Home from "./pages/home";
@@ -14,6 +16,13 @@ import PhotoGallery from "./components/photoGallery";
 import Login from "./components/login";
 
 const App = () => {
+  const [user, setUser] = useState(null);
+
+  useEffect(() => {
+    onAuthStateChanged(auth, (currentUser) => {
+      setUser(currentUser);
+    });
+  }, []);
   return (
     <Router>
       <div className="flex flex-col min-h-screen">
