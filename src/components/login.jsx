@@ -16,12 +16,15 @@ const Login = ({ setUser }) => {
 
   const handleGoogleLogin = async () => {
     try {
+      console.log("Google Sign-In button clicked"); // Check if function is triggered
       const result = await signInWithPopup(auth, provider);
+      console.log("User signed in:", result.user); // Check if login works
       setUser(result.user);
     } catch (err) {
       console.error("Google sign-in failed:", err);
     }
   };
+  
 
   const handleLogout = async () => {
     await signOut(auth);

@@ -19,9 +19,11 @@ const App = () => {
   const [user, setUser] = useState(null);
 
   useEffect(() => {
-    onAuthStateChanged(auth, (currentUser) => {
+    const unsubscribe = onAuthStateChanged(auth, (currentUser) => {
       setUser(currentUser);
     });
+
+    return () => unsubscribe();
   }, []);
   return (
     <Router>

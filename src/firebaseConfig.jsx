@@ -6,7 +6,7 @@ import { getStorage } from "firebase/storage";
 
 // Your Firebase Config (Find it in Firebase Console -> Project Settings)
 const firebaseConfig = {
-  apiKey: "YOUR_API_KEY",
+  apiKey: "AIzaSyDiqRJ0ivmhV3NqS--yuDF129mo365tbwU",
   authDomain: "NickPhotoPortfolio.firebaseapp.com",
   projectId: "nickphotoportfolio",
   storageBucket: "NickPhotoPortfolio.appspot.com",
@@ -19,6 +19,6 @@ const auth = getAuth(app);
 const provider = new GoogleAuthProvider(); // Google Provider
 const db = getFirestore(app);
 const storage = getStorage(app);
-
+console.log("Firebase Auth from config:", auth);
 export { auth, provider, db, storage };
 
