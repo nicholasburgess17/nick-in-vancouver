@@ -9,6 +9,8 @@ import ProductPage from "./pages/productPage";
 import Cart from "./pages/cart";
 import About from "./pages/about";
 import Contact from "./pages/contact";
+import UploadPhoto from "./components/uploadPhoto";
+import PhotoGallery from "./components/photoGallery";
 
 const App = () => {
   return (
@@ -25,6 +27,8 @@ const App = () => {
             <Route path="/about" element={<About />} />
             <Route path="/contact" element={<Contact />} />
           </Routes>
+          <UploadPhoto />
+      <PhotoGallery />
         </main>
         <Footer />
       </div>

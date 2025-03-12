@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { storage, db } from "../firebaseConfig";
 import { ref, uploadBytes, getDownloadURL } from "firebase/storage";
 import { collection, addDoc } from "firebase/firestore";
-
+//This will upload photos to firebase storage, save metadata and download url to firestore
 const UploadPhoto = () => {
   const [image, setImage] = useState(null);
   const [title, setTitle] = useState("");
