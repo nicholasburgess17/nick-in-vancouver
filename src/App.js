@@ -14,7 +14,8 @@ import Contact from "./pages/contact";
 import UploadPhoto from "./components/uploadPhoto";
 import PhotoGallery from "./components/photoGallery";
 import Login from "./components/login";
-
+import AdminDashboard from "./components/adminDashboard";
+import ProtectedRoute from "./components/protectedRoute";
 const App = () => {
   const [user, setUser] = useState(null);
 
@@ -32,6 +33,7 @@ const App = () => {
         <main className="flex-grow pt-16">
           <Routes>
             <Route path="/" element={<Home />} />
+            <Route path="/admin" element={<ProtectedRoute><AdminDashboard /></ProtectedRoute>} />
             <Route path="/portfolio" element={<Portfolio />} />
             <Route path="/store" element={<Store />} />
             <Route path="/store/:productId" element={<ProductPage />} />
