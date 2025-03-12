@@ -11,6 +11,7 @@ import About from "./pages/about";
 import Contact from "./pages/contact";
 import UploadPhoto from "./components/uploadPhoto";
 import PhotoGallery from "./components/photoGallery";
+import Login from "./components/login";
 
 const App = () => {
   return (
@@ -27,8 +28,15 @@ const App = () => {
             <Route path="/about" element={<About />} />
             <Route path="/contact" element={<Contact />} />
           </Routes>
-          <UploadPhoto />
-      <PhotoGallery />
+          {/* Login Component */}
+          <Login setUser={setUser} />
+
+          {/* Show Upload button only if user is logged in */}
+          {user && <UploadPhoto />}
+
+          {/* Show Photo Gallery */}
+
+          <PhotoGallery />
         </main>
         <Footer />
       </div>
